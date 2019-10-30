@@ -1,0 +1,12 @@
+<div class="container content">
+
+<%= form_tag(sessions_path) do %>
+
+	<%= text_field_tag :email, '', :placeholder => "email", class: 'form-control' %><br>
+	
+	<%= text_field_tag :password, '', :placeholder => "enter a password", class: 'form-control' %></br>
+    <%= submit_tag %>
+<% end %>
+
+</div>
+

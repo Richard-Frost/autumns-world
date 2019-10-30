@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AutumnsWorld</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Autumn's World</a>
+  
+  </div>
+</nav>
+<img src="<%= image_url('aw2.jpg') %>" class="img-fluid" alt="Responsive image">
+
+
+    <%= yield %>
+
+  </body>
+</html>
