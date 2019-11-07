@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-	  params.require(:post).permit(:title, :content, :user_id, :pic, :youtube_id)
+	  params.require(:post).permit(:title, :content, :user_id, :pic, :youtube_id, :pic_url)
 	end
 
 	def choose_layout
