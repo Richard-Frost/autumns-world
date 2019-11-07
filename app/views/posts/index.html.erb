@@ -24,5 +24,29 @@
   </div>
 <%end%>
 
-<img src="https://photos.app.goo.gl/UMbZYAZKTSKVNfQm8"></img>
+<div class="container col1">
+
+<h1> Create a new Post </h1>
+<%= form_for(@post) do |f| %>
+  <label> Title </label></br>
+  <%= f.text_field :title, class: 'form-control' %></br>
+  <label> Content </label></br>
+  <%= f.text_area :content, class: 'form-control' %></br>
+  <%= f.label "photo" %>
+  <%= f.file_field :pic %>
+  <%= f.label "photo url" %>
+  <%= f.text_field :pic_url %>
+  <%= f.label "video id" %>
+  <%= f.text_field :youtube_id %>
+  <%= f.submit %>
+<%end%>
+
+
+</div>
+
+
+
+
+ 
+
 
