@@ -5,23 +5,7 @@
     <h1> <%= post.title %> </h1> 
     <p> <%= post.content %> </p> 
 
-	<% if post.pic.attached? %>
-      <div class="pic">
-        <img src="<%= url_for(post.pic)%>">
-      </div>
- 	<%end%>
-
-  <% if post.pic_url %>
-      <div class="pic">
-        <img src="<%= post.pic_url%>">
-      </div>
-  <%end%>
-
-	<% if !post.youtube_id.blank?%>
-  <%binding.pry%>
-	  <iframe width="560" height="315" src='https://www.youtube.com/embed/<%= post.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>'frameborder="0" style="border:0" allowfullscreen></iframe>
-    <%end%>
-  </div>
+	
 <%end%>
 
 
