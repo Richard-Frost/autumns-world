@@ -1,2 +1,18 @@
+<div class="container col1">
 
-<h1>asdfdf</h1>
+<h1> Create a new Post </h1>
+<%= form_for(@post) do |f| %>
+  <label> Title </label></br>
+  <%= f.text_field :title, class: 'form-control' %></br>
+  <label> Content </label></br>
+  <%= f.text_area :content, class: 'form-control' %></br>
+  <%= f.label "pic" %>
+  <%= f.file_field :pic, class: 'form-control' %>
+  <%= f.label "video id" %>
+  <%= f.text_field :youtube_id, class: 'form-control' %>
+  <%= f.submit %>
+<%end%>
+
+
+</div>
+
