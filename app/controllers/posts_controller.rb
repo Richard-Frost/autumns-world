@@ -4,7 +4,6 @@ class PostsController < ApplicationController
 	skip_before_action :auth, :admin?, only: [:index]
 	layout :choose_layout
 	
-	
 	def new
 	  @post = Post.new
 	end

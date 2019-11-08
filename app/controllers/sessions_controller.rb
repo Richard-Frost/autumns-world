@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 	def create
 	user = User.find_by(:email => params[:email])
 	session[:user_id] = user.id
-	redirect_to user_path(user)
+	redirect_to root_path
 	end 
 
 	def destroy
