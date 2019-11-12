@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
 	before_action :auth, :admin?
-	skip_before_action :auth, :admin?, only: [:index]
+	skip_before_action :auth, :admin?, only: [:index, :show]
 	layout :choose_layout
 	
 	def new
