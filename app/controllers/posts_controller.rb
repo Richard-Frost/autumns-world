@@ -36,7 +36,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-	  params.require(:post).permit(:title, :content, :user_id, :pic, :pic_url).merge(youtube_id: youtube_id)
+	  params.require(:post).permit(:title, :content, :user_id, :pic, :pic_url, :description).merge(youtube_id: youtube_id)
     end
  
 	def choose_layout
