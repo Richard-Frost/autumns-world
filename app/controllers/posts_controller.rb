@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 	end
 
 	def index
-	  @posts = Post.all 
+	  @posts = Post.all
 	end
 
 	def show
@@ -36,15 +36,19 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-	  params.require(:post).permit(:title, :content, :user_id, :pic, :youtube_id, :pic_url)
-	end
-
+	  params.require(:post).permit(:title, :content, :user_id, :pic, :pic_url).merge(youtube_id: youtube_id)
+    end
+ 
 	def choose_layout
 		if current_user
 			"application"
 		else
 		 "guest"
 		end
+	end
+
+	def youtube_id
+		params[:post][:youtube_id].gsub("https://youtu.be/", '')
 	end
 
 end

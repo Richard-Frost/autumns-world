@@ -16,10 +16,17 @@
 @import "bootstrap";
 
 
-h1, h2 {
+h1, h2, a {
 	color: #ff00bf;
 	font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
+a:hover {
+	text-decoration: none;
+	background-color: #ff00bf;
+	color: white
+}
+
 body {
 	background-color: #ebebeb;
 }
