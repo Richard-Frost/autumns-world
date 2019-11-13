@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'login' => "sessions#new"
+  get 'privacy' => "sessions#privacy"
   post'sessions' => "sessions#create"
   get '/logout' => "sessions#destroy"
   resources :posts

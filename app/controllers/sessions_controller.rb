@@ -13,5 +13,8 @@ class SessionsController < ApplicationController
       session.destroy
       redirect_to login_path
     end
+
+    def privacy
+    end
 end
  
