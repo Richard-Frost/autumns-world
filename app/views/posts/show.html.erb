@@ -4,19 +4,14 @@
   <p> <%= @post.content %> </p> 
 
   <% if @post.pic.attached? %>
-        <div class="pic">
-          <img src="<%= url_for(@post.pic)%>">
-        </div>
-   	<%end%>
-  
-  	<% if !@post.youtube_id.blank? %>
-    
-  	  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @post.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <%end%>
-
-<%= social_share_button_tag(@post.title) %>
-
-
-
-
+    <div class="pic">
+      <img src="<%= url_for(@post.pic)%>">
     </div>
+  <% end %>
+  
+  <% if !@post.youtube_id.blank? %>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @post.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <% end %>
+
+</div>
