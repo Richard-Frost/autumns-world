@@ -4,11 +4,11 @@
     <title>AutumnsWorld</title>
     
     <%= csrf_meta_tags %>
-
+    <meta property="fb:app_id"        content="1477790215708904" />
     <meta property="og:url"                content="<%=post_url(@post) if @post%>" />
     <meta property="og:type"               content="article" />
     <meta property="og:title"              content="<%=@post.title if @post%>" />
-    <meta property="og:description"        content="<%=@post.description if @post%>" />
+    <meta property="og:description"        content="<%=image_url(@post) if @post%>" />
     
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
