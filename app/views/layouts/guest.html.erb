@@ -4,10 +4,11 @@
     <title>AutumnsWorld</title>
     <meta property="fb:app_id" content="1477790215708904" />
 
-    <meta property="og:url"                content="<%=post_url(@post) if @post%>" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="<%=@post.title if @post%>" />
-    <meta property="og:description"        content="<%=image_url(@post) if @post%>" />
+    <meta property="og:url"         content="<%=post_url(@post) if @post%>" />
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="<%=@post.title if @post%>" />
+    <meta property="og:description" content="<%= @post.description) if @post%>" />
+    <meta property="og:image"       content="<%=image_url(@post) if @post.pic%>" />
     
     <%= csrf_meta_tags %>
 

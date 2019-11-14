@@ -14,5 +14,6 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @post.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <% end %>
 
-  <%= social_share_button_tag(@post.title) %>
+  <%= social_share_button_tag('Share to Facebook', :url => post_url(@post), desc: "<%=@post.title)%>" %>
+
 </div>
