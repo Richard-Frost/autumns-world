@@ -9,12 +9,9 @@
     <meta property="og:title"       content="<%= @post.title if @post%>" />
     <meta property="og:description" content="<%= @post.description if @post %>" />
 
-    <% if @post.pic.attached? %>
-    <meta property="og:image"       content="<%= image_tag(@post.pic)%>" />
-    <% end %>
-    
-    <%binding.pry%>
-    
+    <% if @post.pic %>
+    <meta property="og:image"       content="#{<%= url_for(@post.pic)%>}" />
+    <%end%>
     
     <%= csrf_meta_tags %>
 
