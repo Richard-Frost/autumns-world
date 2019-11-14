@@ -5,10 +5,10 @@
     
     <%= csrf_meta_tags %>
 
-    <meta property="og:url"                content="<%=post_url(@post)%>" />
+    <meta property="og:url"                content="<%=post_url(@post) if @post%>" />
     <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="<%=@post.title%>" />
-    <meta property="og:description"        content="<%=@post.decription%>" />
+    <meta property="og:title"              content="<%=@post.title if @post%>" />
+    <meta property="og:description"        content="<%=@post.description if @post%>" />
     
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
