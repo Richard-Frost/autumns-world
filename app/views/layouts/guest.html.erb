@@ -5,6 +5,12 @@
     
     <%= csrf_meta_tags %>
 
+    <meta property="og:url"                content="<%=post_url(@post)%>" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="<%=@post.title%>" />
+    <meta property="og:description"        content="<%=@post.decription%>" />
+    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -20,7 +26,7 @@
   	<nav class="navbar sticky-top navbar-light bg-light">
       <a class="navbar-brand" href="#">Autumn's World</a>
     </div>
-    
+
     </nav>
 
     <img src="<%= image_url('aw2.jpg') %>" class="img-fluid" alt="Responsive image">
