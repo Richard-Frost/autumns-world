@@ -4,6 +4,7 @@
   <p> <%= @post.content %> </p> 
 
   <% if @post.pic.attached? %>
+
     <div class="pic">
       <img src="<%= url_for(@post.pic)%>">
     </div>
