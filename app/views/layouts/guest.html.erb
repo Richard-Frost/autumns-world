@@ -8,7 +8,7 @@
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content="<%=@post.title if @post%>" />
     <meta property="og:description" content="<%= @post.description if @post%>" />
-    <meta property="og:image"       content="<%=image_url(@post) if @post.pic%>" />
+    <meta property="og:image"       content="<%=@post.pic if @post.pic%>" />
     
     <%= csrf_meta_tags %>
 
