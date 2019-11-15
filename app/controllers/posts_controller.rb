@@ -42,8 +42,10 @@ class PostsController < ApplicationController
 	def choose_layout
 		if current_user
 			"application"
-		else
-		 "guest"
+		elsif !current_user && @post.pic
+		 "guestshow"
+		 else 
+		 	"guest"
 		end
 	end
 

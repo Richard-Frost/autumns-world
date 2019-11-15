@@ -9,6 +9,8 @@
     <meta property="og:title"       content="<%= @post.title if @post%>" />
     <meta property="og:description" content="<%= @post.description if @post %>" />
 
+    <meta property="og:image"       content="https://autumns-world.herokuapp.com<%=url_for(@post.pic)%>" />
+    
     
     
     <%= csrf_meta_tags %>
