@@ -10,7 +10,7 @@
     <meta property="og:description" content="<%= @post.description if @post %>" />
 
     
-    <meta property="og:image"       content="https://autumns-world.herokuapp.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2bdfd7227c7d04a7c4e472ca54267122aed665aa/IMG_20191102_132522.jpg" />
+    <meta property="og:image"       content="https://autumns-world.herokuapp.com<%=url_for(@post.pic)%>" />
     
     
     <%= csrf_meta_tags %>
