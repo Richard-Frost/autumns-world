@@ -16,5 +16,7 @@ class SessionsController < ApplicationController
 
     def privacy
     end
+    #<meta property="og:image"       content="https://autumns-world.herokuapp.com<%=url_for(@post.pic)%>" />
+    
 end
  
