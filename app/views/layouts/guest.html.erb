@@ -9,6 +9,13 @@
     <meta property="og:title"       content="<%= @post.title if @post%>" />
     <meta property="og:description" content="<%= @post.description if @post %>" />
     <meta name="twitter:text:title" content="<%= @post.title if @post %>">
+    
+    <% if @post %>
+      <%if @post.pic %>
+    <meta property="og:image"       content="https://autumns-world.herokuapp.com<%=url_for(@post.pic)%>" />
+    <meta name="twitter:image" content="https://autumns-world.herokuapp.com<%=url_for(@post.pic)%>" />
+      <%end%>
+   <%end%>
 
     
     
